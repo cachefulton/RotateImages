@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RotateImages.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="15"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <HorizontalStackLayout
+                Spacing="25"
+                Padding="30"
+                HorizontalOptions="Center">
+                
+                <Image
+                    x:Name="cat1"
+                    Source="cat1.jpg"
+                    SemanticProperties.Description="Cat 1"
+                    HeightRequest="225"/>
+
+                <Image
+                    x:Name="cat2"
+                    Source="cat2.jpg"
+                    SemanticProperties.Description="Cat 2"
+                    HeightRequest="225"/>
+
+                <Image
+                    x:Name="cat3"
+                    Source="cat3.jpg"
+                    SemanticProperties.Description="Cat 3"
+                    HeightRequest="225"/>
+
+                <Image
+                    x:Name="cat4"
+                    Source="cat4.jpg"
+                    SemanticProperties.Description="Cat 4"
+                    HeightRequest="225"/>
+                
+            </HorizontalStackLayout>
+
+            <Label
+                x:Name="time"
+                Text=""
+                SemanticProperties.HeadingLevel="Level2"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+            <Label
+                x:Name="thread"
+                Text=""
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="The threads that the pictures were rotated in"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+            <Button
+                x:Name="rotateBtn"
+                Text="Rotate Images"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="OnRotate"
+                HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
